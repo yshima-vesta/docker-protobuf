@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  amd64:
+    image: protobuf:amd64
+    build:
+      args:
+        ARCH: amd64
+    user: "${MYUID:-1000}:${MYGID:-1000}"
+    volumes:
+     - ./protos:/protos:ro
+     - ./outputs:/outputs
+  arm64:
+    image: protobuf:arm64
+    build:
+      args:
+        ARCH: arm64
+    user: "${MYUID:-1000}:${MYGID:-1000}"
+    volumes:
+     - ./protos:/protos:ro
+     - ./outputs:/outputs
