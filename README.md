@@ -18,3 +18,7 @@ outputsディレクトリに変換されたCSharpコードが出力されます
 ```
 $ ./generate.sh
 ```
+
+## Reference source
+
+https://github.com/jaegertracing/docker-protobuf
