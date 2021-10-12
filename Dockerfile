@@ -35,6 +35,7 @@ RUN git clone --recursive --depth=1 -b v${GRPC_CSHARP_VERSION} https://github.co
     cmake \
         -DCMAKE_BUILD_TYPE=Release \
         -DgRPC_BUILD_TESTS=OFF \
+        # 不要なのでOFFにしたいがgRPCのバグでONでなければmake installに失敗する
         -DgRPC_BUILD_GRPC_CPP_PLUGIN=ON \
         -DgRPC_BUILD_GRPC_NODE_PLUGIN=OFF \
         -DgRPC_BUILD_GRPC_OBJECTIVE_C_PLUGIN=OFF \
