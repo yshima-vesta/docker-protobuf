@@ -3,6 +3,7 @@ services:
   amd64:
     image: protobuf:amd64
     build:
+      context: .
       args:
         ARCH: amd64
     user: "${MYUID:-1000}:${MYGID:-1000}"
@@ -12,6 +13,7 @@ services:
   arm64:
     image: protobuf:arm64
     build:
+      context: .
       args:
         ARCH: arm64
     user: "${MYUID:-1000}:${MYGID:-1000}"
