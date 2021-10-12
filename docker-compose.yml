@@ -1,21 +1,9 @@
 version: "3.8"
 services:
-  x86_64:
-    image: protobuf:x86_64
+  protobuf:
+    image: protobuf:mitsukuni
     build:
       context: .
-      args:
-        ARCH: amd64
-    user: "${MYUID:-1000}:${MYGID:-1000}"
-    volumes:
-     - ./protos:/protos:ro
-     - ./outputs:/outputs
-  arm64:
-    image: protobuf:arm64
-    build:
-      context: .
-      args:
-        ARCH: arm64
     user: "${MYUID:-1000}:${MYGID:-1000}"
     volumes:
      - ./protos:/protos:ro
