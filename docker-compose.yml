@@ -1,7 +1,7 @@
 version: "3.8"
 services:
-  amd64:
-    image: protobuf:amd64
+  x86_64:
+    image: protobuf:x86_64
     build:
       context: .
       args:
