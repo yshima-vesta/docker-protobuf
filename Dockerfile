@@ -79,5 +79,5 @@ RUN apk add --no-cache bash libstdc++ && \
     mkdir -p /{protos,outputs}
 COPY protoc-wrapper /usr/bin/protoc-wrapper
 ENV LD_LIBRARY_PATH='/usr/lib:/usr/lib64:/usr/lib/local'
-ENTRYPOINT ["protoc-wrapper", "-I/usr/include"]
+ENTRYPOINT ["protoc-wrapper"]
 CMD ["--proto_path=/protos", "--csharp_out=/outputs", "/protos/*.proto"]
