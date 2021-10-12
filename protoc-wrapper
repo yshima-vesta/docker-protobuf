@@ -37,8 +37,8 @@ protoc_cmd="protoc ${includes[@]} ${outs[@]} ${args[@]}"
 protoc_csharp_cmd="protoc-csharp ${includes[@]} ${csharp_out} ${args[@]}"
 
 if [ ${csharp_out} ]; then
-    ${protoc_csharp_cmd} || exit 1
+    ${protoc_csharp_cmd} && echo "Succeeded to generate your codes!" || exit 1
 fi
 if [ ${#outs[@]} -gt 0 ]; then
-    exec ${protoc_cmd}
+    exec ${protoc_cmd} && echo "Succeeded to generate your codes!"
 fi
