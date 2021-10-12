@@ -1,6 +1,6 @@
-ARG ALPINE_VERSION=3.14
-ARG GRPC_CSHARP_VERSION=1.41.0
-ARG GRPC_VERSION=1.41.0
+ARG ALPINE_VERSION
+ARG GRPC_CSHARP_VERSION
+ARG GRPC_VERSION
 
 FROM alpine:${ALPINE_VERSION} AS protoc_base
 RUN apk add --no-cache build-base curl cmake autoconf libtool git zlib-dev linux-headers && \

@@ -4,6 +4,10 @@ services:
     image: protobuf:mitsukuni
     build:
       context: .
+      args:
+        - ALPINE_VERSION=3.14
+        - GRPC_CSHARP_VERSION=1.41.0
+        - GRPC_VERSION=1.41.0
     user: "${MYUID:-1000}:${MYGID:-1000}"
     volumes:
      - ./protos:/protos:ro
